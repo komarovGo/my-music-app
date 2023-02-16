@@ -314,10 +314,10 @@ function CentrBlock (){
                             </div>
                         </div>
                         <div className="track__author">
-                            <a className="track__author-link" href="#"/>
+                            <a className="track__author-link" href="http://"/>
                         </div>
                         <div className="track__album">
-                            <a className="track__album-link" href="#"/>
+                            <a className="track__album-link" href="http://"/>
                         </div>
                         <div className="track__time">
                             <span className="track__time-text"/>
