@@ -12,17 +12,17 @@ function MenuSidebar() {
         <div className="sidebar__block">
             <div className="sidebar__list">
                 <div className="sidebar__item">
-                    <a className="sidebar__link" href="#">
+                    <a className="sidebar__link" href="http://">
                         <img className="sidebar__img" src={playlist01} alt="day's playlist"/>
                     </a>
                 </div>
                 <div className="sidebar__item">
-                    <a className="sidebar__link" href="#">
+                    <a className="sidebar__link" href="http://">
                         <img className="sidebar__img" src={playlist02} alt="day's playlist"/>
                     </a>
                 </div>
                 <div className="sidebar__item">
-                    <a className="sidebar__link" href="#">
+                    <a className="sidebar__link" href="http://">
                         <img className="sidebar__img" src={playlist03} alt="day's playlist"/>
                     </a>
                 </div>
