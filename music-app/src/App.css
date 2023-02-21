@@ -130,6 +130,7 @@ body {
 }
 
 .nav__burger {
+  cursor: pointer;
   width: 20px;
   height: 36px;
   padding: 13px 0;
@@ -219,6 +220,7 @@ body {
 }
 
 .centerblock__content {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -868,4 +870,85 @@ body {
 
 .volume__progress-line {
   width: 109px;
+}
+
+.click-filter-menu{
+  display: flex;
+  justify-content: space-between;
+}
+
+.click-menu{
+  position: relative;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  bottom: 30px;
+  left: 88px;
+  width: 248px;
+  height: 305px;
+  background: #313131;
+  cursor: pointer;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.click-menu-name{
+  font-family: 'StratosSkyeng';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+.click-menu-name:hover{
+  text-decoration: underline;
+  color: #B672FF;
+}
+
+.click-menu-year{
+  position: relative;
+  width: 403px;
+  height: 92px;
+  background: #313131;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.input-menu-year{
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: #313131;
+  border: 1px solid white;
+  transition: 0.2s all linear;
+ 
+}
+
+.input-menu-year:checked {
+  border: 1px solid #313131;
+  background-color: white;
+  
+}
+
+.label-menu-year{
+  cursor: pointer;
+  font-family: 'StratosSkyeng';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.label-menu-year:hover{
+  text-decoration: underline;
+  color: #B672FF;
 }

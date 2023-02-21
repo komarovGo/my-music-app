@@ -4,6 +4,22 @@ import note from '../img/icon/note.svg';
 import like from '../img/icon/like.svg';
 
 function CentrBlock (){
+    // const [isVisible, setVisible] = useState({
+    //     author: false,
+    //     year: false,
+    //     genre: false,
+    // })
+
+//   function  toggleVisible(componentName) {
+//     if (componentName === 'author'){
+//         setVisible(...)
+//     } if (componentName === 'year'){
+//         setVisible(...);
+//     } if (componentName === 'genre'){
+//         setVisible(...);
+//     } 
+// }
+
     return(
     <div className="main__centerblock centerblock">
         <div className="centerblock__search search">
@@ -18,6 +34,28 @@ function CentrBlock (){
             <div className="filter__button button-author _btn-text">исполнителю</div>
             <div className="filter__button button-year _btn-text">году выпуска</div>
             <div className="filter__button button-genre _btn-text">жанру</div>
+        </div>
+        <div className="click-filter-menu">
+            <ul className="click-menu">
+                <li className="click-menu-name">Michael Jackson</li>
+                <li className="click-menu-name">Frank Sinatra</li>
+                <li className="click-menu-name">Calvin Harris</li>
+                <li className="click-menu-name">Zhu</li>
+                <li className="click-menu-name">Arctic Monkeys</li>            
+            </ul>
+            <div className="click-menu-year">
+                <input className="input-menu-year" type="radio" name="year" id="new" value="Более новые"/>
+                <label className="label-menu-year" htmlFor="new">Более новые</label>
+                <input className="input-menu-year" type="radio" name="year" id="old" value="Более старые"/>
+                <label className="label-menu-year" htmlFor="old">Более старые</label>
+            </div>
+            <ul className="click-menu">
+                <li className="click-menu-name">Рок</li>
+                <li className="click-menu-name">Хип-хоп</li>
+                <li className="click-menu-name">Поп-музыка</li>
+                <li className="click-menu-name">Техно</li>
+                <li className="click-menu-name">Инди</li>            
+            </ul>
         </div>
         <div className="centerblock__content">
             <div className="content__title playlist-title">
