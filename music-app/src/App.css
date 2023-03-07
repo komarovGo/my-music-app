@@ -877,20 +877,21 @@ body {
   justify-content: space-between;
 }
 
-.click-menu{
-  position: relative;
+.click-menu-author{
+  position: absolute;
+  top: 306px;
+  left: 449px;
   padding: 34px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  bottom: 30px;
-  left: 88px;
   width: 248px;
   height: 305px;
   background: #313131;
   cursor: pointer;
   border-radius: 12px;
   z-index: 1;
+  
 }
 
 .click-menu-name{
@@ -906,7 +907,10 @@ body {
 }
 
 .click-menu-year{
-  position: relative;
+  position: absolute;
+  z-index: 1;
+  left: 593px;
+  top: 306px;
   width: 403px;
   height: 92px;
   background: #313131;
@@ -952,3 +956,94 @@ body {
   text-decoration: underline;
   color: #B672FF;
 }
+
+.click-menu-gener{
+  position: absolute;
+  top: 306px;
+  left: 755px;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 248px;
+  height: 305px;
+  background: #313131;
+  cursor: pointer;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+/* скрывающие блоки  */
+.sidebar-loading{
+  bottom: 154px;
+  position: relative;
+  background-color: #313131;
+  width: 250px;
+  height: 150px;
+} 
+
+.playlist-loading{
+  position: relative;
+  top: 51px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 1107px;
+  height: 51px ;
+}
+
+.playlist-loading-item1{
+  width: 51px;
+  height: 51px ;
+  background-color: #313131;
+}
+
+.playlist-loading-item2{
+  width: 356px;
+  height: 21px ;
+  background-color: #313131;
+ 
+}
+
+.playlist-loading-item3{
+  width: 279px;
+  height: 21px ;
+  background-color: #313131;
+  margin-left: 20px;
+}
+
+.playlist-loading-item4{
+  width: 320px;
+  height: 19px ;
+  background-color: 313131;
+  margin-left: 47px;
+}
+
+/* Бар блоки закргузки */
+
+.imeg-loading{
+  top: 16px;
+  position: absolute;
+  width: 51px;  
+  height: 51px;
+  background-color: #313131 ;
+}
+
+.author-loading{
+  top: 22px;
+  left: 357px;
+  position: absolute;
+  width: 59px;  
+  height: 15px;
+  background-color: #313131 ;
+}
+
+.albom-loading{
+  top: 45px;
+  left: 357px;
+  position: absolute;
+  width: 59px;  
+  height: 15px;
+  background-color: #313131 ;
+}
+/* скрывающие блоки */
