@@ -4,15 +4,17 @@ import logo from '../img/logo.png';
 
 function MenuNav (){
     const [visible, setVisible] = useState(false);
-
-    const toggleVisibility = () => setVisible(!visible);
+    
+    function toggleVisibility() {
+        setVisible(!visible);
+    }
 
     return(
      <nav className="main__nav nav">
         <div className="nav__logo logo">
             <img className="logo__image"src={logo} alt="logo"/> 
         </div>
-            <div className="nav__burger burger" onClick={toggleVisibility}>
+            <div className="nav__burger burger" onClick={toggleVisibility} role="presentation">
                 <span className="burger__line"/>
                 <span className="burger__line"/>
                 <span className="burger__line"/>
