@@ -353,6 +353,7 @@ body {
   height: 12px;
   fill: transparent;
   stroke: #696969;
+  
 }
 
 .col01 {
@@ -876,35 +877,15 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
-.click-menu-author{
-  position: absolute;
-  top: 306px;
-  left: 449px;
-  padding: 34px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 248px;
-  height: 305px;
-  background: #313131;
-  cursor: pointer;
-  border-radius: 12px;
-  z-index: 1;
-  
-}
-
+    
 .click-menu-name{
   font-family: 'StratosSkyeng';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-}
-.click-menu-name:hover{
-  text-decoration: underline;
-  color: #B672FF;
-}
+} 
+
 
 .click-menu-year{
   position: absolute;
@@ -1021,13 +1002,13 @@ body {
 
 /* Бар блоки закргузки */
 
-.imeg-loading{
+/* .imeg-loading{
   top: 16px;
   position: absolute;
   width: 51px;  
   height: 51px;
   background-color: #313131 ;
-}
+} */
 
 .author-loading{
   top: 22px;
