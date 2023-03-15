@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 
-export  const centerblockFilter = styled.div`
+export  const CenterblockFilter = styled.div`
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -15,7 +15,7 @@ export  const centerblockFilter = styled.div`
     margin-bottom: 51px;
 `
 
-export  const filterTitle = styled.div`
+export  const FilterTitle = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -23,7 +23,7 @@ export  const filterTitle = styled.div`
     margin-right: 15px;
 `
 
-export  const filterButton = styled.div`
+export  const FilterButton = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -41,7 +41,7 @@ export  const filterButton = styled.div`
 }
 `
 
-export  const clickFilterMenu = styled.div`
+export  const ClickFilterMenu = styled.div`
     display: flex;
     justify-content: space-between;
 `

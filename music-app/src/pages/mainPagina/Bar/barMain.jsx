@@ -1,7 +1,6 @@
-
 import BarLeft from './barLeft';
 
-import volume from '../../img/icon/volume.svg';
+import volume from '../../../img/icon/volume.svg';
 
 import * as S from './styledBarMain'
 
@@ -10,19 +9,19 @@ function Bar(){
      <S.Bar>
         <S.BarContent>
             <S.BarPlayerProgress/>
-            <S.barlayerBlock>
+            <S.BarlayerBlock>
                 <BarLeft/>
-                <S.barVolumeBlock>
+                <S.BarVolumeBlock>
                     <S.VolumeContent>
                         <S.VolumeImage>
-                            <S.volumeSvg src={volume} alt="volume" />
+                            <S.VolumeSvg src={volume} alt="volume" />
                         </S.VolumeImage>
                         <S.VolumeProgressBtn>
-                            <S.volumeProgressLine  type="range" name="range"/>
+                            <S.VolumeProgressLine  type="range" name="range"/>
                         </S.VolumeProgressBtn>
                     </S.VolumeContent>
-                </S.barVolumeBlock>
-            </S.barlayerBlock>
+                </S.BarVolumeBlock>
+            </S.BarlayerBlock>
         </S.BarContent>
     </S.Bar>
     )

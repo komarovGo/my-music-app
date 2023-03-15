@@ -1,5 +1,5 @@
-import search from '../../img/icon/search.svg';
-import watch from '../../img/icon/watch.svg';
+import search from '../../../img/icon/search.svg';
+import watch from '../../../img/icon/watch.svg';
 
 import Playlist from './Playlist';
 import FilterMenu from './FilterMenu';
@@ -18,12 +18,12 @@ function CentrBlock (){
         <FilterMenu/>                       
         <S.CenterblockContent>
             <S.ContentTitle>
-                <S.playlistTitleCol1>Трек</S.playlistTitleCol1>
-                <S.playlistTitleCol2>ИСПОЛНИТЕЛЬ</S.playlistTitleCol2>
-                <S.playlistTitleCol3>АЛЬБОМ</S.playlistTitleCol3>
-                <S.playlistTitleCol4>
-                    <S.playlistTitleSvg  src={watch} alt="asd" />
-                </S.playlistTitleCol4>
+                <S.PlaylistTitleCol1>Трек</S.PlaylistTitleCol1>
+                <S.PlaylistTitleCol2>ИСПОЛНИТЕЛЬ</S.PlaylistTitleCol2>
+                <S.PlaylistTitleCol3>АЛЬБОМ</S.PlaylistTitleCol3>
+                <S.PlaylistTitleCol4>
+                    <S.PlaylistTitleSvg  src={watch} alt="asd" />
+                </S.PlaylistTitleCol4>
             </S.ContentTitle>
             <Playlist/>
         </S.CenterblockContent>

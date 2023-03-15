@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 
-export  const contentPlaylist = styled.div`
+export  const ContentPlaylist = styled.div`
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -12,13 +12,13 @@ export  const contentPlaylist = styled.div`
     overflow-y: auto;
 `
 
-export  const playListItem = styled.div`
+export  const PlayListItem = styled.div`
     width: 100%;
     display: block;
     margin-bottom: 12px;
 `
 
-export  const playlistTrack = styled.div`
+export  const PlaylistTrack = styled.div`
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -34,7 +34,7 @@ export  const playlistTrack = styled.div`
             align-items: center;
 `
 
-export  const trackTitle = styled.div`
+export  const TrackTitle = styled.div`
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -48,7 +48,7 @@ export  const trackTitle = styled.div`
     width: 447px;
 `
 
-export  const trackTitleImage = styled.div`
+export  const TrackTitleImage = styled.div`
     width: 51px;
     height: 51px;
     padding: 16px;
@@ -65,16 +65,16 @@ export  const trackTitleImage = styled.div`
     margin-right: 17px;
 `
 
-export  const trackTitleSvg = styled.img`
+export  const TrackTitleSvg = styled.img`
     width: 18px;
     height: 17px;
     fill: transparent;
     stroke: #4E4E4E;
 `
 
-export  const trackTitleText = styled.div``
+export  const TrackTitleText = styled.div``
 
-export  const trackTitleLink = styled.a`
+export  const TrackTitleLink = styled.a`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -82,7 +82,7 @@ export  const trackTitleLink = styled.a`
     color: #FFFFFF;
 `
 
-export  const trackTitleSpan = styled.span`
+export  const TrackTitleSpan = styled.span`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -90,7 +90,7 @@ export  const trackTitleSpan = styled.span`
     color: #4E4E4E;
 `
 
-export  const trackAuthor = styled.div`
+export  const TrackAuthor = styled.div`
     width: 321px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -100,7 +100,7 @@ export  const trackAuthor = styled.div`
             justify-content: flex-start;
 `
 
-export  const trackAuthorLink = styled.a`
+export  const TrackAuthorLink = styled.a`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -109,11 +109,11 @@ export  const trackAuthorLink = styled.a`
     text-align: left;
 `
 
-export  const trackAlbum = styled.div`
+export  const TrackAlbum = styled.div`
     width: 245px;
 `
 
-export  const trackAlbumLink = styled.a`
+export  const TrackAlbumLink = styled.a`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -121,11 +121,11 @@ export  const trackAlbumLink = styled.a`
     color: #696969;
 `
 
-export  const trackTime = styled.div`
+export  const TrackTime = styled.div`
     
 `
 
-export  const trackTimeSvg = styled.img`
+export  const TrackTimeSvg = styled.img`
     width: 14px;
     height: 12px;
     margin-right: 17px;
@@ -133,7 +133,7 @@ export  const trackTimeSvg = styled.img`
     stroke: #696969;
 `
 
-export  const trackTimeText = styled.span`
+export  const TrackTimeText = styled.span`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;

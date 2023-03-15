@@ -15,32 +15,32 @@ function FilterMenu (){
     }
 
     return(
-        <S.centerblockFilter>
-            <S.filterTitle>Искать по:</S.filterTitle>
-            <S.filterButton
+        <S.CenterblockFilter>
+            <S.FilterTitle>Искать по:</S.FilterTitle>
+            <S.FilterButton
                 onClick={() => toggleVisibleFilter('author')} 
                 role="presentation"
                 >
                     исполнителю
-            </S.filterButton>
-            <S.filterButton 
+            </S.FilterButton>
+            <S.FilterButton 
                 onClick={() => toggleVisibleFilter('year')} 
                 role="presentation"
                 >
                     году выпуска
-            </S.filterButton>
-            <S.filterButton 
+            </S.FilterButton>
+            <S.FilterButton 
                 onClick={() => toggleVisibleFilter("gener")} 
                 role="presentation"
                 >                
                     жанру
-            </S.filterButton>
-            <S.clickFilterMenu>
+            </S.FilterButton>
+            <S.ClickFilterMenu>
                 {isVisibleFilter === 'author' && (<RenderClickMenuAuthor/>)}
                 {isVisibleFilter === 'year' && (<RenderClickMenuYuar/>)}
                 {isVisibleFilter === 'gener' && (<RenderClickMenuGenre/>)}
-            </S.clickFilterMenu>
-        </S.centerblockFilter>   
+            </S.ClickFilterMenu>
+        </S.CenterblockFilter>   
     )
 }
 

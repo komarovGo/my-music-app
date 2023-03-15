@@ -1,13 +1,13 @@
 import styled from "styled-components"
 
 
-export  const mainNav  = styled.nav`
+export  const MainNav  = styled.nav`
     width: 244px;
     background-color: #181818;
     padding: 20px 0 20px 36px;
 `
 
-export  const navLogo = styled.div`
+export  const NavLogo = styled.div`
     width: 113.33px;
     height: 43px;
     padding: 13px 0 13px 0;
@@ -15,13 +15,13 @@ export  const navLogo = styled.div`
     margin-bottom: 20px;
 `
 
-export  const logoImage = styled.img`
+export  const LogoImage = styled.img`
     width: 113.33px;
     height: 17px;
     color: #181818;
 `
 
-export  const navBurge = styled.div`
+export  const NavBurge = styled.div`
     cursor: pointer;
     width: 20px;
     height: 36px;
@@ -38,26 +38,26 @@ export  const navBurge = styled.div`
             justify-content: space-between;
 `
 
-export  const burgeLine = styled.span`
+export  const BurgeLine = styled.span`
     display: inline-block;
     width: 100%;
     height: 1px;
     background-color: #D3D3D3;
 `
 
-export  const navMenu = styled.div`
+export  const NavMenu = styled.div`
     display: block;
     visibility: visible;
 `
 
-export  const menuList = styled.ul`
+export  const MenuList = styled.ul`
     padding: 18px 0 10px 0;
 `
-export  const menuItem = styled.li`
+export  const MenuItem = styled.li`
     padding: 5px 0;
     margin-bottom: 16px;
 `
-export  const menuLink = styled.a`
+export  const MenuLink = styled.a`
     color: #FFFFFF;
     font-weight: 400;
     font-size: 16px;

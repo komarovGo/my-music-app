@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 
-export  const playerTrackPlay  = styled.div`
+export  const PlayerTrackPlay  = styled.div`
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -11,7 +11,7 @@ export  const playerTrackPlay  = styled.div`
             flex-direction: row;
 `
 
-export  const trackPlayContain = styled.div`
+export  const TrackPlayContain = styled.div`
     width: auto;
     display: -ms-grid;
     display: grid;
@@ -23,7 +23,7 @@ export  const trackPlayContain = styled.div`
             align-items: center;
 `
 
-export  const trackPlayImage = styled.div`
+export  const TrackPlayImage = styled.div`
     width: 51px;
     height: 51px;
     background-color: #313131;
@@ -43,20 +43,20 @@ export  const trackPlayImage = styled.div`
     grid-area: image;
 `
 
-export  const trackPlaySvg = styled.img`
+export  const TrackPlaySvg = styled.img`
     width: 18px;
     height: 17px;
     fill: transparent;
     stroke: #4E4E4E;
 `
-export  const trackPlayAuthor = styled.div`
+export  const TrackPlayAuthor = styled.div`
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: author;
     min-width: 49px;
 `
 
-export  const trackPlayAuthorLink = styled.a`
+export  const TrackPlayAuthorLink = styled.a`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -65,14 +65,14 @@ export  const trackPlayAuthorLink = styled.a`
     white-space: nowrap;
 `
 
-export  const trackPlayAlbum = styled.div`
+export  const TrackPlayAlbum = styled.div`
     -ms-grid-row: 2;
     -ms-grid-column: 2;
     grid-area: album;
     min-width: 49px;
 `
 
-export  const trackPlayAlbumLink = styled.a`
+export  const TrackPlayAlbumLink = styled.a`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -81,7 +81,7 @@ export  const trackPlayAlbumLink = styled.a`
     white-space: nowrap;
 `
 
-export  const trackPlayLikeDis = styled.div`
+export  const TrackPlayLikeDis = styled.div`
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -95,21 +95,21 @@ export  const trackPlayLikeDis = styled.div`
     margin-left: 26%;
 `
 
-export  const trackPlayLike = styled.div`
+export  const TrackPlayLike = styled.div`
     padding: 5px;
 `
-export  const trackPlayLikeSvg = styled.img`
+export  const TrackPlayLikeSvg = styled.img`
     width: 14px;
     height: 12px;
     fill: transparent;
     stroke: #696969;
 `
 
-export  const trackPlayDislike = styled.div`
+export  const TrackPlayDislike = styled.div`
     margin-left: 28.5px;
     padding: 5px
 `
-export  const trackPlayDislikeSvg = styled.img`
+export  const TrackPlayDislikeSvg = styled.img`
     width: 14.34px;
     height: 13px;
     fill: transparent;
@@ -118,25 +118,25 @@ export  const trackPlayDislikeSvg = styled.img`
 
 // Скрывающий блок картинку воспроизведения
 
-export  const imegLoadingBlock = styled.div`
+export  const ImegLoadingBlock = styled.div`
     top: 16px;
     position: absolute;
     width: 51px;  
     height: 51px;
     background-color: #313131 ;
 `
-export  const authorLoadingBlock = styled.div`
-    top: 22px;
-    left: 357px;
+export  const AuthorLoadingBlock = styled.div`
+    top: 21px;
+    left: 353px;
     position: absolute;
     width: 59px;  
     height: 15px;
     background-color: #313131 ;
 `
 
-export  const albumLoadingBlock = styled.div`
+export  const AlbumLoadingBlock = styled.div`
     top: 45px;
-    left: 357px;
+    left: 353px;
     position: absolute;
     width: 59px;  
     height: 15px;

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 
-export  const barPlayer = styled.div`
+export  const BarPlayer = styled.div`
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -17,7 +17,7 @@ export  const barPlayer = styled.div`
             justify-content: flex-start;
 `
 
-export  const playerControls = styled.div`
+export  const PlayerControls = styled.div`
      display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -28,7 +28,7 @@ export  const playerControls = styled.div`
     padding: 0 27px 0 31px;
 `
 
-export  const playerBtnPrev = styled.div`
+export  const PlayerBtnPrev = styled.div`
     margin-right: 23px;
 
     padding: 5px;
@@ -40,12 +40,12 @@ export  const playerBtnPrev = styled.div`
             align-items: center;
 `
 
-export  const playerBtnPrevSvg = styled.img`
+export  const PlayerBtnPrevSvg = styled.img`
     width: 15px;
     height: 14px;
 `
 
-export  const playerBtnPlay = styled.div`
+export  const PlayerBtnPlay = styled.div`
     margin-right: 23px;
 
     padding: 5px;
@@ -57,13 +57,13 @@ export  const playerBtnPlay = styled.div`
             align-items: center;
 `
 
-export  const playerBtnPlaySvg = styled.img`
+export  const PlayerBtnPlaySvg = styled.img`
     width: 22px;
     height: 20px;
     fill: #D9D9D9;
 `
 
-export  const playerBtnNext = styled.div`
+export  const PlayerBtnNext = styled.div`
     margin-right: 28px;
     fill: #a53939;
 
@@ -76,14 +76,14 @@ export  const playerBtnNext = styled.div`
             align-items: center;
 `
 
-export  const playerBtnNextSvg = styled.img`
+export  const PlayerBtnNextSvg = styled.img`
     width: 15px;
     height: 14px;
     fill: inherit;
     stroke: #D9D9D9;
 `
 
-export  const playerBtnRepeat = styled.div`
+export  const PlayerBtnRepeat = styled.div`
     margin-right: 24px;
 
     padding: 5px;
@@ -95,14 +95,14 @@ export  const playerBtnRepeat = styled.div`
             align-items: center;
 `
 
-export  const playerBtnRepeatSvg = styled.img`
+export  const PlayerBtnRepeatSvg = styled.img`
     width: 18px;
     height: 12px;
     fill: transparent;
     stroke: #696969;
 `
 
-export  const playerBtnShuffle = styled.div`
+export  const PlayerBtnShuffle = styled.div`
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -119,7 +119,7 @@ export  const playerBtnShuffle = styled.div`
             align-items: center;
 `
 
-export  const playerBtnShuffletSvg = styled.img`
+export  const PlayerBtnShuffletSvg = styled.img`
     width: 15px;
     height: 14px;
     fill: inherit;

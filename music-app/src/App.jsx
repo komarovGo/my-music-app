@@ -1,12 +1,6 @@
-import {createGlobalStyle} from "styled-components"
+import styled, {createGlobalStyle} from "styled-components"
 
-import MenuNav from './jsx/menuNav/MenuNav';
-import CentrBlock from './jsx/CentrBlock/centrBlock';
-import MenuSidebar from './jsx/menuSidebar/MenuSidebar';
-import Bar from './jsx/Bar/barMain';
-
-
-import * as S from './stylegApp'
+import AppRoutes from './routes';
 
 const GlibalStyle = createGlobalStyle`
 *{
@@ -79,22 +73,20 @@ body {
   font-style: normal;
 }
 `
+const Wrapper = styled.div`
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background-color: #383838;
+`
 
 function App() {
   return (
-    <S.wrapper>
+    <Wrapper>
       <GlibalStyle/>
-      <S.container>
-        <S.main>
-          <MenuNav/>
-          <CentrBlock/>
-          <MenuSidebar/>
-        </S.main>
-        <Bar/>
-        <footer className="footer"/>
-      </S.container>
-    </S.wrapper>
-  );
-}
+        <AppRoutes/>     
+    </Wrapper>
+  )
+} 
 
 export default App;

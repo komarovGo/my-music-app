@@ -84,7 +84,7 @@ export  const ContentTitle  = styled.div`
     margin-bottom: 24px;
 `
 
-export  const playlistTitleCol1 = styled.div`
+export  const PlaylistTitleCol1 = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -96,7 +96,7 @@ export  const playlistTitleCol1 = styled.div`
     width: 447px;
 `
 
-export  const playlistTitleCol2 = styled.div`
+export  const PlaylistTitleCol2 = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -108,7 +108,7 @@ export  const playlistTitleCol2 = styled.div`
     width: 321px;
 `
 
-export  const playlistTitleCol3 = styled.div`
+export  const PlaylistTitleCol3 = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -120,7 +120,7 @@ export  const playlistTitleCol3 = styled.div`
     width: 245px;
 `
 
-export  const playlistTitleCol4 = styled.div`
+export  const PlaylistTitleCol4 = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -133,7 +133,7 @@ export  const playlistTitleCol4 = styled.div`
     text-align: end;
 `
 
-export  const playlistTitleSvg = styled.img`
+export  const PlaylistTitleSvg = styled.img`
     width: 12px;
     height: 12px;
     fill: transparent;

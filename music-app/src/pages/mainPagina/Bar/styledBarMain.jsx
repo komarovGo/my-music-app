@@ -24,7 +24,7 @@ export const BarPlayerProgress = styled.div`
     background: #2E2E2E;
 `
 
-export const barlayerBlock = styled.div`
+export const BarlayerBlock = styled.div`
     height: 73px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -38,7 +38,7 @@ export const barlayerBlock = styled.div`
             justify-content: space-between;
 `
 
-export const barVolumeBlock = styled.div`
+export const BarVolumeBlock = styled.div`
     width: auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -71,7 +71,7 @@ export const VolumeImage = styled.div`
     margin-right: 17px;
 `
 
-export const volumeSvg = styled.img`
+export const VolumeSvg = styled.img`
     width: 13px;
     height: 18px;
     fill: transparent;
@@ -81,6 +81,6 @@ export const VolumeProgressBtn = styled.div`
     width: 109px;
 `
 
-export const volumeProgressLine = styled.input`
+export const VolumeProgressLine = styled.input`
     width: 109px;
 `
