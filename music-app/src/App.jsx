@@ -51,28 +51,25 @@ ul li {
   list-style: none;
 }
 
-html{
-  width: 100%;
-  height: 100%;
-  font-family: 'StratosSkyeng', sans-serif;
-  color: #FFFFFF;
+@font-face {
+  font-family: 'StratosSkyeng';
+  src: local('StratosSkyeng'), local('StratosSkyeng'),
+    url('./fonts/StratosSkyeng.woff2') format('woff2'),
+    url('./fonts/StratosSkyeng.woff') format('woff'),
+  font-weight: 400;
+  font-style: normal;
 }
 
+
+html,
 body {
   width: 100%;
   height: 100%;
   font-family: 'StratosSkyeng', sans-serif;
-  color: #FFFFFF;
-}
-
-
-@font-face {
-  font-family: 'StratosSkyeng';
-  src: local("StratosSkyeng"), local("StratosSkyeng"), url("./fonts/Stratos-Regular.woff2") format("woff2"), url("./fonts/Stratos-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
+  color: #ffffff;
 }
 `
+
 const Wrapper = styled.div`
     width: 100%;
     min-height: 100%;
