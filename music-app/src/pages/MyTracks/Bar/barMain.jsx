@@ -1,8 +1,7 @@
 import BarLeft from './barLeft';
-
 import volume from '../../../img/icon/volume.svg';
-
 import * as S from './styledBarMain'
+
 
 function Bar(){
     return (

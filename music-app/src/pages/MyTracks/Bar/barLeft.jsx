@@ -1,5 +1,5 @@
 import BarCentr from './barCentr'
- 
+
 
 import prev from '../../../img/icon/prev.svg';
 import play from '../../../img/icon/play.svg';
@@ -15,10 +15,11 @@ function BarLeft(){
       <S.BarPlayer>
         <S.PlayerControls>
             <S.PlayerBtnPrev>                             
-                <S.PlayerBtnPrevSvg src={prev} alt="prev"/>
+                <S.PlayerBtnPrevSvg src={prev}   alt="prev"/>
             </S.PlayerBtnPrev>
             <S.PlayerBtnPlay>
                 <S.PlayerBtnPlaySvg src={play} alt="play"/>
+              
             </S.PlayerBtnPlay>
             <S.PlayerBtnNext>
                 <S.PlayerBtnNextSvg src={next} alt="next"/>

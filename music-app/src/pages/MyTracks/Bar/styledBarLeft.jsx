@@ -125,3 +125,7 @@ export  const PlayerBtnShuffletSvg = styled.img`
     fill: inherit;
     stroke: #D9D9D9;
 `
+
+export  const audio = styled.audio`
+   
+`

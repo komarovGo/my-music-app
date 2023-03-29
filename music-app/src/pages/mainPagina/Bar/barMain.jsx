@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 import BarLeft from './barLeft';
 
 import volume from '../../../img/icon/volume.svg';
@@ -5,6 +7,9 @@ import volume from '../../../img/icon/volume.svg';
 import * as S from './styledBarMain'
 
 function Bar(){
+
+    const refVolume = useRef(null)
+    console.log(refVolume);
     return (
      <S.Bar>
         <S.BarContent>
