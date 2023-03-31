@@ -1,9 +1,7 @@
-// import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 
 import BarCentr from './barCentr'
-
-// import Ausic from '../../../../public/asd.mp3';
 
 import puse from '../../../img/icon/puse.svg';
 import prev from '../../../img/icon/prev.svg';
@@ -16,21 +14,21 @@ import shuffle from '../../../img/icon/shuffle.svg';
 import * as S from './styledBarLeft'
 
 function BarLeft(){
-    // const audioRef = useRef(null);
+    const audioRef = useRef(null);
      
   
-    // const [isPlaying, setIsPlaying] = useState(false)
+    const [isPlaying, setIsPlaying] = useState(false)
 
     // const [volume, setvolume] = useState(true)
 
 
-    // const handleStop = () => {
-    //     audioRef.current.pause();
-    // };
+    const handleStop = () => {
+        audioRef.current.pause();
+    };
 
-    // const handleStart = () => {
-    //     audioRef.current.play();
-    // };
+    const handleStart = () => {
+        audioRef.current.play();
+    };
 
     // useEffect(() => {
     //     if(audioRef){
@@ -40,7 +38,7 @@ function BarLeft(){
 
     return (
       <S.BarPlayer>
-         {/* <audio controls src='https://painassasin.online/media/music_files/Frank_Schroter_-_Open_Sea_epic.mp3' ref={audioRef} style={{display: "none"}}/> */}
+         <audio controls src='https://painassasin.online/media/music_files/Frank_Schroter_-_Open_Sea_epic.mp3' ref={audioRef} style={{display: "none"}}/>
         <S.PlayerControls>
             <S.PlayerBtnPrev>                               
                 <S.PlayerBtnPrevSvg src={prev} alt="prev"/>
@@ -49,12 +47,12 @@ function BarLeft(){
                 <S.PlayerBtnPlaySvg 
                     src={play} 
                     alt="play"
-                //    onClick={handleStart}
+                   onClick={handleStart}
                 />   
                 <S.PlayerBtnPlaySvg 
                     src={puse} 
                     alt="pause"
-                    // onClick={handleStop}
+                    onClick={handleStop}
                 />
             </S.PlayerBtnPlay>
             <S.PlayerBtnNext>

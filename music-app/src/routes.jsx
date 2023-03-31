@@ -13,22 +13,21 @@ import NotFound from "./pages/NotFount/notFound";
 
 import ProtectedRoute from './protected-route/index';
 
-
 function AppRoutes() {
   const token = Cookies.get('token')
   return (
-        <Routes>
-          <Route path="/" element={<Login/>}/>
-          <Route path="/registro" element={<Registro/>}/>
-          <Route path="*" element={<NotFound/>}/>
-          <Route element={<ProtectedRoute isAllowed={Boolean(token)}/>}>      
-            <Route path="/main" element={<MainPiges/>}/>
-            <Route path="/main/mytracks" element={<MyTracks/>}/>
-            <Route path="/main/plailist/1" element={<PlaylistDay/>}/>      
-            <Route path="/main/plailist/2" element={<DanceHit/>}/>      
-            <Route path="/main/plailist/3" element={<IndiCharge/>}/>   
-          </Route>   
-        </Routes>
+    <Routes>
+      <Route path="/" element={<Login/>}/>
+      <Route path="/registro" element={<Registro/>}/>
+      <Route path="*" element={<NotFound/>}/>
+      <Route element={<ProtectedRoute isAllowed={Boolean(token)}/>}>      
+        <Route path="/main" element={<MainPiges/>}/>
+        <Route path="/main/mytracks" element={<MyTracks/>}/>
+        <Route path="/main/plailist/1" element={<PlaylistDay/>}/>      
+        <Route path="/main/plailist/2" element={<DanceHit/>}/>      
+        <Route path="/main/plailist/3" element={<IndiCharge/>}/>   
+      </Route>   
+    </Routes>
   )
 } 
 
