@@ -28,6 +28,18 @@ function AppRoutes() {
         <Route path="/main/plailist/3" element={<IndiCharge/>}/>   
       </Route>   
     </Routes>
+
+
+  //   <Routes>
+  //     <Route path="/" element={<Login/>}/>
+  //     <Route path="/registro" element={<Registro/>}/>
+  //     <Route path="*" element={<NotFound/>}/>
+  //     <Route path="/main" element={<ProtectedRoute isAllowed={Boolean(token)}><MainPiges/></ProtectedRoute>}/>
+  //     <Route path="/main/mytracks" element={<ProtectedRoute isAllowed={Boolean(token)}><MyTracks/></ProtectedRoute>}/>
+  //     <Route path="/main/plailist/1" element={<ProtectedRoute isAllowed={Boolean(token)}><PlaylistDay/></ProtectedRoute>}/>
+  //     <Route path="/main/plailist/2" element={<ProtectedRoute isAllowed={Boolean(token)}><DanceHit/></ProtectedRoute>}/>
+  //     <Route path="/main/plailist/3" element={<ProtectedRoute isAllowed={Boolean(token)}><IndiCharge/></ProtectedRoute>}/>
+  //   </Routes>
   )
 } 
 
