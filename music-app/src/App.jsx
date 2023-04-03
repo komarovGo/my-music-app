@@ -1,12 +1,6 @@
-import {createGlobalStyle} from "styled-components"
+import styled, {createGlobalStyle} from "styled-components"
 
-import MenuNav from './jsx/menuNav/MenuNav';
-import CentrBlock from './jsx/CentrBlock/centrBlock';
-import MenuSidebar from './jsx/menuSidebar/MenuSidebar';
-import Bar from './jsx/Bar/barMain';
-
-
-import * as S from './stylegApp'
+import AppRoutes from './routes';
 
 const GlibalStyle = createGlobalStyle`
 *{
@@ -57,44 +51,39 @@ ul li {
   list-style: none;
 }
 
-html{
-  width: 100%;
-  height: 100%;
-  font-family: 'StratosSkyeng', sans-serif;
-  color: #FFFFFF;
+@font-face {
+  font-family: 'StratosSkyeng';
+  src: local('StratosSkyeng'), local('StratosSkyeng'),
+    url('./fonts/StratosSkyeng.woff2') format('woff2'),
+    url('./fonts/StratosSkyeng.woff') format('woff'),
+  font-weight: 400;
+  font-style: normal;
 }
 
+
+html,
 body {
   width: 100%;
   height: 100%;
   font-family: 'StratosSkyeng', sans-serif;
-  color: #FFFFFF;
+  color: #ffffff;
 }
+`
 
-
-@font-face {
-  font-family: 'StratosSkyeng';
-  src: local("StratosSkyeng"), local("StratosSkyeng"), url("./fonts/Stratos-Regular.woff2") format("woff2"), url("./fonts/Stratos-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
+const Wrapper = styled.div`
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background-color: #383838;
 `
 
 function App() {
   return (
-    <S.wrapper>
+    <Wrapper>
       <GlibalStyle/>
-      <S.container>
-        <S.main>
-          <MenuNav/>
-          <CentrBlock/>
-          <MenuSidebar/>
-        </S.main>
-        <Bar/>
-        <footer className="footer"/>
-      </S.container>
-    </S.wrapper>
-  );
-}
+        <AppRoutes/>     
+    </Wrapper>
+  )
+} 
 
 export default App;
