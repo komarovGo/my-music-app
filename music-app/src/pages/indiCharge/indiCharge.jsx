@@ -1,7 +1,7 @@
-import MenuNav from './menuNav/MenuNav';
+import MenuNav from '../../components/menuNav/MenuNav';
 import CentrBlock from './CentrBlock/centrBlock';
-import Bar from './Bar/barMain';
-import MenuSidebar from './menuSidebar/MenuSidebar';
+import Bar from '../../components/Bar/barMain';
+import ButtomExet from '../../components/buttomExet/buttomExet';
 
 import * as S from '../mainPagina/StyledMenuPiges'
 
@@ -11,7 +11,7 @@ function IndiCharge() {
         <S.Main>
           <MenuNav/>
           <CentrBlock/>
-          <MenuSidebar/>
+          <ButtomExet/>
         </S.Main>
         <Bar/>
         <footer className="footer"/>

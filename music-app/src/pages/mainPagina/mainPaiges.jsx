@@ -1,7 +1,7 @@
-import MenuNav from './menuNav/MenuNav';
-import CentrBlock from './CentrBlock/centrBlock';
-import MenuSidebar from './menuSidebar/MenuSidebar';
-import Bar from './Bar/barMain';
+import MenuNav from '../../components/menuNav/MenuNav';
+import CentrBlock from '../../components/CentrBlock/centrBlock';
+import MenuSidebar from '../../components/menuSidebar/MenuSidebar';
+import Bar from '../../components/Bar/barMain';
 
 import * as S from './StyledMenuPiges'
 
