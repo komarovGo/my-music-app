@@ -1,5 +1,8 @@
+import { useThemeContext } from '../../context/theme'
+
 import search from '../../img/icon/search.svg';
 import watch from '../../img/icon/watch.svg';
+
 
 import Playlist from './Playlist';
 import FilterMenu from './FilterMenu';
@@ -8,8 +11,9 @@ import * as S from './styledCenterBlock'
 
 
 function CentrBlock (){
+    const {theme} = useThemeContext();  
     return(
-    <S.MainCenterblock>
+    <S.MainCenterblock style={{backgroundColor:theme.background,color:theme.color}}>
         <S.CenterblockSearch>         
             <S.SearchSvg src={search} alt="search" />                          
             <S.SearchText type="search" placeholder="Поиск" name="search"/>

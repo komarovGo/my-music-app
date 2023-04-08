@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useThemeContext } from '../../context/theme'
+
 
 const ClickMenuAuthor = styled.ul`
   position: absolute;
@@ -29,9 +31,10 @@ const ClickMenuName = styled.li`
 `
 
 function RenderClickMenuAuthor (){
+  const {theme} = useThemeContext();
   return(
       <div>
-          <ClickMenuAuthor>
+          <ClickMenuAuthor style={{background:theme.backgroundMenuNav, border: theme.border}}>
               <ClickMenuName>Michael Jackson</ClickMenuName>
               <ClickMenuName>Frank Sinatra</ClickMenuName>
               <ClickMenuName>Calvin Harris</ClickMenuName>

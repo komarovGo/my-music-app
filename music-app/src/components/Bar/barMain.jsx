@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { useThemeContext } from '../../context/theme'
 
 import BarLeft from './barLeft';
 
@@ -12,11 +13,7 @@ function Bar(){
     const audioRef = useRef(null);
     const progressBarRef = useRef(null);
     const [isPlaying, setPlaying] = useState(false)
-
-    // const handleProgressChange = () => {
-    //     audioRef.current.currentTime = progressBarRef.current.value;
-        
-    // };
+    const {theme} = useThemeContext()
 
     useEffect(() => {
     if (audioRef.current) {
@@ -28,7 +25,7 @@ function Bar(){
     }, [isPlaying])
 
     return (
-     <S.Bar>
+     <S.Bar style={{backgroundColor:theme.backgroundMenuNav}}>
          <audio controls src={audio} ref={audioRef}  style={{display: "none"}}/>
         <S.BarContent>
             <S.BarPlayerProgress 

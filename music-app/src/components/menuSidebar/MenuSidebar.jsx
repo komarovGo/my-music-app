@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom"
+import { useThemeContext } from '../../context/theme'
+
 
 import playlist01 from '../../img/playlist01.png';
 import playlist02 from '../../img/playlist02.png';
@@ -9,7 +11,7 @@ import * as S from './styledMenuSidebar'
 
 function MenuSidebar() {
     const [isLoading, setLoading] = useState(true)
-
+    const {theme} = useThemeContext()
     useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
@@ -18,9 +20,9 @@ function MenuSidebar() {
   }, [])
 
     return(
-    <S.mainSidebar>
+    <S.mainSidebar style={{backgroundColor:theme.background}}>
         <S.sidebarPersonal>
-            <S.sidebarPersonalName>Sergey.Ivanov</S.sidebarPersonalName>
+            <S.sidebarPersonalName style={{color:theme.color}}>Sergey.Ivanov</S.sidebarPersonalName>
             <S.sidebarAvatar/>
         </S.sidebarPersonal>
         <S.sidebarBlock>

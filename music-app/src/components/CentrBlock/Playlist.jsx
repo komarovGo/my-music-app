@@ -1,4 +1,5 @@
 import { useState, useEffect} from 'react';
+import { useThemeContext } from '../../context/theme'
 
 import note from '../../img/icon/note.svg';
 import like from '../../img/icon/like.svg';
@@ -7,6 +8,8 @@ import LoadingBlockGrey from './loadingGreyBlock';
 import * as S from './styledPlaylist'
 
 function Playlist (){    
+    const {theme} = useThemeContext();
+
     // Эмуляция загрузки
     const [isMainLoading, setMainLoading] = useState(true)
     
@@ -27,16 +30,16 @@ function Playlist (){
                             <S.TrackTitleSvg src={note} alt="asd" />
                         </S.TrackTitleImage>
                         <S.TrackTitleText>
-                            <S.TrackTitleLink href="http://">Guilt
+                            <S.TrackTitleLink style={{color:theme.color}} href="http://">Guilt
                                 <S.TrackTitleSpan/>
                             </S.TrackTitleLink>
                         </S.TrackTitleText>
                     </S.TrackTitle>
                     <S.TrackAuthor>
-                        <S.TrackAuthorLink href="http://">Nero</S.TrackAuthorLink >
+                        <S.TrackAuthorLink style={{color:theme.color}} href="http://">Nero</S.TrackAuthorLink >
                     </S.TrackAuthor>
                     <S.TrackAlbum>
-                        <S.TrackAlbumLink href="http://">Welcome Reality</S.TrackAlbumLink>
+                        <S.TrackAlbumLink  href="http://">Welcome Reality</S.TrackAlbumLink>
                     </S.TrackAlbum>
                     <S.TrackTime className="track__time">
                         <S.TrackTimeSvg src={like} alt="asd"/>                           
@@ -52,13 +55,13 @@ function Playlist (){
                             <S.TrackTitleSvg src={note} alt="asd" />
                         </S.TrackTitleImage>
                         <S.TrackTitleText>
-                            <S.TrackTitleLink href="http://">Elektro 
+                            <S.TrackTitleLink style={{color:theme.color}} href="http://">Elektro 
                                 <S.TrackTitleSpan/>
                             </S.TrackTitleLink>
                         </S.TrackTitleText>
                     </S.TrackTitle>
                     <S.TrackAuthor>
-                        <S.TrackAuthorLink href="http://">Dynoro, Outwork, Mr. Gee</S.TrackAuthorLink>
+                        <S.TrackAuthorLink style={{color:theme.color}} href="http://">Dynoro, Outwork, Mr. Gee</S.TrackAuthorLink>
                     </S.TrackAuthor>
                     <S.TrackAlbum>
                         <S.TrackAlbumLink href="http://">Elektro</S.TrackAlbumLink>
@@ -74,16 +77,16 @@ function Playlist (){
                 <S.PlaylistTrack>
                     <S.TrackTitle>
                         <S.TrackTitleImage>
-                            <S.TrackTitleSvg src={note} alt="asd" />
+                            <S.TrackTitleSvg style={{color:theme.color}} src={note} alt="asd" />
                         </S.TrackTitleImage>
                         <S.TrackTitleText>
-                            <S.TrackTitleLink href="http://">I’m Fire 
+                            <S.TrackTitleLink style={{color:theme.color}} href="http://">I’m Fire 
                                 <S.TrackTitleSpan/>
                             </S.TrackTitleLink>
                         </S.TrackTitleText>
                     </S.TrackTitle>
                     <S.TrackAuthor>
-                        <S.TrackAuthorLink href="http://">Ali Bakgor</S.TrackAuthorLink>
+                        <S.TrackAuthorLink style={{color:theme.color}} href="http://">Ali Bakgor</S.TrackAuthorLink>
                     </S.TrackAuthor>
                     <S.TrackAlbum>
                         <S.TrackAlbumLink href="http://">I’m Fire</S.TrackAlbumLink>
@@ -102,13 +105,13 @@ function Playlist (){
                             <S.TrackTitleSvg  src={note} alt="music" />
                         </S.TrackTitleImage>
                         <S.TrackTitleText>
-                            <S.TrackTitleLink href="http://">Non Stop
+                            <S.TrackTitleLink style={{color:theme.color}} href="http://">Non Stop
                                 <S.TrackTitleSpan>(Remix)</S.TrackTitleSpan>
                             </S.TrackTitleLink>
                         </S.TrackTitleText>
                     </S.TrackTitle>
                     <S.TrackAuthor>
-                        <S.TrackAuthorLink href="http://">Стоункат, Psychopath</S.TrackAuthorLink>
+                        <S.TrackAuthorLink style={{color:theme.color}} href="http://">Стоункат, Psychopath</S.TrackAuthorLink>
                     </S.TrackAuthor>
                     <S.TrackAlbum>
                         <S.TrackAlbumLink href="http://">Non Stop</S.TrackAlbumLink>
@@ -127,13 +130,13 @@ function Playlist (){
                             <S.TrackTitleSvg src={note} alt="asd" />
                         </S.TrackTitleImage>
                         <S.TrackTitleText>
-                            <S.TrackTitleLink href="http://">Run Run 
+                            <S.TrackTitleLink style={{color:theme.color}} href="http://">Run Run 
                                 <S.TrackTitleSpan>(feat. AR/CO)</S.TrackTitleSpan>
                             </S.TrackTitleLink>
                         </S.TrackTitleText>
                     </S.TrackTitle>
                     <S.TrackAuthor>
-                        <S.TrackAuthorLink href="http://">Jaded, Will Clarke, AR/CO</S.TrackAuthorLink>
+                        <S.TrackAuthorLink style={{color:theme.color}} href="http://">Jaded, Will Clarke, AR/CO</S.TrackAuthorLink>
                     </S.TrackAuthor>
                     <S.TrackAlbum>
                         <S.TrackAlbumLink href="http://">Run Run</S.TrackAlbumLink>
@@ -152,13 +155,13 @@ function Playlist (){
                             <S.TrackTitleSvg  src={note} alt="asd" />
                         </S.TrackTitleImage>
                         <S.TrackTitleText>
-                            <S.TrackTitleLink href="http://">Eyes on Fire 
+                            <S.TrackTitleLink style={{color:theme.color}} href="http://">Eyes on Fire 
                                 <S.TrackTitleSpan>(Zeds Dead Remix)</S.TrackTitleSpan>
                             </S.TrackTitleLink>
                         </S.TrackTitleText>
                     </S.TrackTitle>
                     <S.TrackAuthor>
-                        <S.TrackAuthorLink href="http://">Blue Foundation, Zeds Dead</S.TrackAuthorLink>
+                        <S.TrackAuthorLink style={{color:theme.color}} href="http://">Blue Foundation, Zeds Dead</S.TrackAuthorLink>
                     </S.TrackAuthor>
                     <S.TrackAlbum>
                         <S.TrackAlbumLink href="http://">Eyes on Fire</S.TrackAlbumLink>

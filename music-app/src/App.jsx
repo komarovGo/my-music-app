@@ -1,5 +1,4 @@
 import styled, {createGlobalStyle} from "styled-components"
-
 import AppRoutes from './routes';
 
 const GlibalStyle = createGlobalStyle`
@@ -78,12 +77,13 @@ const Wrapper = styled.div`
 `
 
 function App() {
-  return (
-    <Wrapper>
-      <GlibalStyle/>
-        <AppRoutes/>     
-    </Wrapper>
+  
+  return ( 
+        <Wrapper>
+          <GlibalStyle/>
+            <AppRoutes/>     
+        </Wrapper>  
   )
-} 
+}
 
 export default App;

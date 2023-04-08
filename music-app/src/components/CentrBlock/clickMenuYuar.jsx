@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useThemeContext } from '../../context/theme'
 
    const ClickMenuYear = styled.div`
     position: absolute;
@@ -26,8 +27,10 @@ import styled from "styled-components";
 `
 
 function RenderClickMenuYuar (){
+  const {theme} = useThemeContext();
+
     return(
-        <ClickMenuYear>
+        <ClickMenuYear style={{background:theme.backgroundMenuNav, border: theme.border}}>
             <input type="radio" name="year" id="new" value="Более новые"/>
             <LabelMenuYear  htmlFor="new">Более новые</LabelMenuYear>
             <input type="radio" name="year" id="old" value="Более старые"/>

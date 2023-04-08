@@ -9,7 +9,7 @@ function MyTracks() {
   return (  
     <S.Container>
         <S.Main>
-          <MenuNav/>
+          <MenuNav/>          
           <CentrBlock/>
           <MenuSidebar/>
         </S.Main>

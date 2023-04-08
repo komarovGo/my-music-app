@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useThemeContext } from '../../context/theme'
 
 const ClickMenuGener = styled.ul`
   position: absolute;
@@ -28,10 +29,10 @@ const ClickMenuName = styled.li`
   }
 `
 function RenderClickMenuGenre (){
-   
+  const {theme} = useThemeContext();
     return(
         <div>
-            <ClickMenuGener>
+            <ClickMenuGener style={{background:theme.backgroundMenuNav, border: theme.border}}>
                 <ClickMenuName>Рок</ClickMenuName>
                 <ClickMenuName>Хип-хоп</ClickMenuName>
                 <ClickMenuName>Поп-музыка</ClickMenuName>

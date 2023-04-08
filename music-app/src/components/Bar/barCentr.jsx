@@ -1,4 +1,6 @@
 import { useState, useEffect} from 'react';
+import { useThemeContext } from '../../context/theme'
+
  
 import note from '../../img/icon/note.svg';
 import like from '../../img/icon/like.svg';
@@ -8,6 +10,8 @@ import * as S from './styledBarCentr'
 
 
 function BarCentr(){
+    const {theme} = useThemeContext()
+
     // Эмуляция загрузки
     const [isBarLoading, setBarLoading] = useState(true)
 
@@ -26,11 +30,11 @@ function BarCentr(){
             </S.TrackPlayImage>
             {isBarLoading && <S.ImegLoadingBlock/>}
             <S.TrackPlayAuthor>
-                <S.TrackPlayAuthorLink href="http://">Ты та...</S.TrackPlayAuthorLink>
+                <S.TrackPlayAuthorLink style={{color:theme.color}} href="http://">Ты та...</S.TrackPlayAuthorLink>
             </S.TrackPlayAuthor>
             {isBarLoading && <S.AuthorLoadingBlock/>}
             <S.TrackPlayAlbum>
-                <S.TrackPlayAlbumLink href="http://">Баста</S.TrackPlayAlbumLink>
+                <S.TrackPlayAlbumLink style={{color:theme.color}} href="http://">Баста</S.TrackPlayAlbumLink>
             </S.TrackPlayAlbum>
             {isBarLoading && <S.AlbumLoadingBlock/>}
         </S.TrackPlayContain>
