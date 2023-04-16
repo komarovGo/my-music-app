@@ -36,7 +36,7 @@ function Login (){
     <S.MainBlock>
         <S.CtnterBlock>
             <S.BlockImg src={logo} alt="music"/>
-            <S.Input placeholder='Логин' value={login} onChange={(e) => setLogin(e.target.value)}/>
+            <S.Input type='email' placeholder='Логин' value={login} onChange={(e) => setLogin(e.target.value)}/>
             <S.Input type='password'placeholder='Пароль' value={inPassword} onChange={(e) => setPassword(e.target.value)} />
                 <S.OstiumButton onClick={handleLogin}>Войти</S.OstiumButton>
                 <S.RegisterButton onClick={handleRegistration}>Зарегистрироваться</S.RegisterButton>

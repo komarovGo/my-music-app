@@ -15,8 +15,7 @@ import * as S from './styledBarLeft'
 function BarLeft({audioRef}){
     const [isPlaying, setIsPlaying] = useState(false);
     
-
-    function togglePlayback() {
+    const togglePlayback = () => {
         if (!isPlaying) {
             setIsPlaying(true);
             audioRef.current.play()

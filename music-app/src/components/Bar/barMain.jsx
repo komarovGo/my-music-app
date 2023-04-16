@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useThemeContext } from '../../context/theme'
-
+/* eslint-disable jsx-a11y/media-has-caption */
 import BarLeft from './barLeft';
 
 import volume from '../../img/icon/volume.svg';
@@ -26,7 +26,7 @@ function Bar(){
 
     return (
      <S.Bar style={{backgroundColor:theme.backgroundMenuNav}}>
-         <audio controls src={audio} ref={audioRef}  style={{display: "none"}}/>
+         <audio  src={audio} ref={audioRef}  style={{display: "none"}}/>
         <S.BarContent>
             <S.BarPlayerProgress 
                 type="range"

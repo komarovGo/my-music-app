@@ -1,6 +1,6 @@
 import { useState}  from "react";
 import { ThemeContext, themes } from '../../context/theme';
-
+/* eslint-disable no-param-reassign */
 
 import MenuNav from '../../components/menuNav/MenuNav';
 import CentrBlock from '../../components/CentrBlock/centrBlock';
@@ -8,7 +8,7 @@ import MenuSidebar from '../../components/menuSidebar/MenuSidebar';
 import Bar from '../../components/Bar/barMain';
 
 import * as S from './StyledMenuPiges'
-import { backgraundColorSVG } from "../../components/menuNav/styledMenuNav";
+
 
 function MainPiges() {
   const [currentTheme, setCurrentTheme] = useState(themes.dark);

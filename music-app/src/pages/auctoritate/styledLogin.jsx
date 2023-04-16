@@ -11,8 +11,8 @@ export  const MainBlock = styled.div`
     background-color: #181818;
 `
 export  const CtnterBlock = styled.div`
-    width: 366px;
-    height: 439px;
+    width: 400px;
+    height: 450px;
     background: #FFFFFF;
     border-radius: 12px;
     display: flex;
@@ -87,6 +87,13 @@ export  const RegisterButton  = styled.button`
         :active{
         background: #D9D9D9;
         }
+`
+
+export  const ErrorText = styled.h4`
+    color: #3F007D;
+    font-size: 10px;
+    text-align: center;
+    margin-top: -15px;
 `
 
    

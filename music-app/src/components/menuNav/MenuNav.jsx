@@ -18,7 +18,7 @@ function MenuNav (){
         setVisible(!visible);
     }
 
-    function toggleButtonTheme() {
+    const toggleButtonTheme = () => {
         if (!isButtonTheme) {
             setButtonTheme(true);
         } else {

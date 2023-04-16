@@ -4,17 +4,23 @@ import styled from "styled-components"
 export  const ContentPlaylist = styled.div`
     display: -webkit-box;
     display: -ms-flexbox;
+    height: 750px;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    overflow-y: auto;
+    overflow: auto;
+        ::-webkit-scrollbar {
+            width: 1px; /* ширина для вертикального скролла */
+            height: 1px; /* высота для горизонтального скролла */
+            background-color: #313131;
+        }
 `
 
 export  const PlayListItem = styled.div`
     width: 100%;
-    display: block;
+    display: flex;
     margin-bottom: 12px;
 `
 
