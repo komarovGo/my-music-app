@@ -1,11 +1,11 @@
 import {configureStore} from "@reduxjs/toolkit";
 import { musicApi } from "./Api";
-import { useReducer } from './userSlice';
+import  userReduxer from './userSlice'; 
 
 export const store = configureStore({
   reducer: {
     [musicApi.reducerPath]: musicApi.reducer,
-    user: useReducer,
+    user: userReduxer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(musicApi.middleware)
 });

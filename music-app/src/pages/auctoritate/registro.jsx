@@ -18,15 +18,14 @@ function Registro (){
         email: '',
         password: '',
     })
-
+    
     const onSignUp = () => {   
         signup(value)
         if(isSuccess === true){
-            navigate('/login', { replace: true })
+            navigate('/', { replace: true })
             
         }
     }
-    console.log(isSuccess);
 
     const LoginChange = (e) => {
         setValue({

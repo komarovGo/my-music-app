@@ -15,8 +15,24 @@ export const musicApi = createApi({
                 method: 'POST',
                 body: payload,
             }), 
-        })
+        }),
+        
+        userLogin: builder.mutation({
+            query: ({ ...payload }) => ({
+                url: '/user/login/',
+                method: 'POST',
+                body: payload,
+            }),
+        }),
+
+        userToken: builder.mutation({
+            query: ({ ...payload }) => ({
+                url: 'user/token/',
+                method: 'POST',
+                body: payload,
+            }),
+        }),
     })
 })
 
-export const {useGetMusicQuery, useUserRegistroMutation} = musicApi;
+export const {useGetMusicQuery, useUserRegistroMutation, useUserLoginMutation, useUserTokenMutation} = musicApi;

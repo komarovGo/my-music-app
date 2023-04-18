@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { useUserLoginMutation, useUserTokenMutation } from '../../Redux/Api';
+import { setUser } from '../../Redux/userSlice';
 
-
-import Cookies from 'js-cookie'
+// import Cookies from 'js-cookie'
 
 import logo from '../../img/logoBlack.png';
 
@@ -10,35 +12,79 @@ import * as S from './styledLogin'
 
 function Login (){
     const navigate = useNavigate()
+    const dispatch = useDispatch()
 
-    const [login, setLogin] = useState('');
-    const [inPassword, setPassword] = useState('');
+    const  [ userlogin, {isSucessc, isLoading, error, data } ] = useUserLoginMutation()
+    const  [ userToken, { data: token } ] = useUserTokenMutation()
+    console.log(token);
+    const [valueLogin, setValue] = useState({
+        email: '',
+        password: '',
+    })
 
-    const handleLogin = (event) => {
-        event.preventDefault()
-        const userLogin = login
-        const userPassword = inPassword
 
-        if (userLogin === 'user' && userPassword === '1234') {
-            Cookies.set('token', '1234')
-            navigate('/main', { replace: true })
-        } else {
-            alert('неправильный логин или пароль')
-        }
+    const EntranceLogin = () => {
+        userlogin(valueLogin).then(({user}) => {
+            console.log(user);
+            dispatch(setUser({
+                email: user.email,
+                id: user.id,
+            }))
+        });
+
+        userToken(valueLogin).then(({tok}) => {
+            console.log(tok);
+            dispatch(setUser({
+                token: tok.access,
+            }))
+        });
+    }
+    // Cookies.set('token', '1234')
+
+    // qweqweqwe
+    // kaka@mail.ru
+    // pomidor11
+
+    //     if (userLogin === 'user' && userPassword === '1234') {
+           
+    //         navigate('/main', { replace: true })
+    //     } else {
+    //         alert('неправильный логин или пароль')
+    //     }
+
+    const EmailChange = (e) => {
+        setValue({
+            ...valueLogin,
+            email: e.target.value,
+        })
+    }
+     const PasswordChange = (e) => {
+            setValue({
+            ...valueLogin,
+            password: e.target.value,
+        })
+
     }
 
-    const handleRegistration = (event) => {
-        event.preventDefault()
+    const handleRegistration = (e) => {
+        e.preventDefault()
         navigate('/registro', { replace: true })
     }
 
+   
     return(
     <S.MainBlock>
         <S.CtnterBlock>
             <S.BlockImg src={logo} alt="music"/>
-            <S.Input type='email' placeholder='Логин' value={login} onChange={(e) => setLogin(e.target.value)}/>
-            <S.Input type='password'placeholder='Пароль' value={inPassword} onChange={(e) => setPassword(e.target.value)} />
-                <S.OstiumButton onClick={handleLogin}>Войти</S.OstiumButton>
+            {error && error.data.detail && (
+                <h5 style={{color:'black'}}>{error.data.detail}</h5>)}
+            <S.Input type='email' placeholder='email' onChange={(e) => EmailChange(e)}/>
+            {error && error.data.email && (
+                <S.ErrorText>{error.data.email}</S.ErrorText>)}
+            <S.Input type='password'placeholder='Пароль' onChange={(e) => PasswordChange(e)} />
+            {error && error.data.password && (
+                <S.ErrorText>{error.data.password}</S.ErrorText>)}
+                <S.OstiumButton onClick={EntranceLogin}>Войти</S.OstiumButton>
                 <S.RegisterButton onClick={handleRegistration}>Зарегистрироваться</S.RegisterButton>
         </S.CtnterBlock>
     </S.MainBlock>
