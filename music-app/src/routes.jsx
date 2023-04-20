@@ -1,6 +1,6 @@
 import { Routes, Route} from "react-router-dom"
 
-import Cookies from 'js-cookie'
+// import Cookies from 'js-cookie'
 
 import MainPiges from './pages/mainPagina/mainPaiges';
 import Login from './pages/auctoritate/login';
@@ -13,14 +13,19 @@ import NotFound from "./pages/NotFount/notFound";
 
 import ProtectedRoute from './protected-route/index';
 
+import { useAuth } from "./Redux/hooks/use-auth";
+
 function AppRoutes() {
-  const token = Cookies.get('token')
+  // const token = Cookies.get('token')
+
+  const { isAuth } = useAuth();
+
   return (
-    <Routes>
+    <Routes> 
       <Route path="/" element={<Login/>}/>
       <Route path="/registro" element={<Registro/>}/>
       <Route path="*" element={<NotFound/>}/>
-      <Route element={<ProtectedRoute isAllowed={Boolean(token)}/>}>      
+      <Route element={<ProtectedRoute isAllowed={isAuth}/>}>      
         <Route path="/main" element={<MainPiges/>}/>
         <Route path="/main/mytracks" element={<MyTracks/>}/>
         <Route path="/main/plailist/1" element={<PlaylistDay/>}/>      

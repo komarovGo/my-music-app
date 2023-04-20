@@ -7,7 +7,7 @@ import volume from '../../img/icon/volume.svg';
 
 import * as S from './styledBarMain'
 
-import audio  from '../../asd.mp3';
+// import audio  from '../../asd.mp3';
 
 function Bar(){
     const audioRef = useRef(null);
@@ -26,7 +26,7 @@ function Bar(){
 
     return (
      <S.Bar style={{backgroundColor:theme.backgroundMenuNav}}>
-         <audio  src={audio} ref={audioRef}  style={{display: "none"}}/>
+         {/* <audio  src={audio} ref={audioRef}  style={{display: "none"}}/> */}
         <S.BarContent>
             <S.BarPlayerProgress 
                 type="range"
