@@ -1,39 +1,28 @@
-import { Routes, Route} from "react-router-dom"
+/* eslint-disable import/no-extraneous-dependencies */
+import { Routes, Route } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import Main from './pages/main/main'
+import Registration from './pages/registration/registration'
+import NotFound from './pages/notFound/notFound'
+import Login from './pages/login/login'
+import Playlist01 from './pages/playlists/playlist'
+import MyTracks from './pages/myTracks/myTracks'
+import ProtectedRoute from './protected-route/ProtectedRoute'
 
-// import Cookies from 'js-cookie'
-
-import MainPiges from './pages/mainPagina/mainPaiges';
-import Login from './pages/auctoritate/login';
-import Registro from './pages/auctoritate/registro';
-import PlaylistDay from './pages/playlistDay/playlistDay';
-import DanceHit from './pages/danceHit/danceHit';
-import IndiCharge from './pages/indiCharge/indiCharge';
-import MyTracks from "./pages/MyTracks/MyTracks";
-import NotFound from "./pages/NotFount/notFound";
-
-import ProtectedRoute from './protected-route/index';
-
-import { useAuth } from "./Redux/hooks/use-auth";
-
-function AppRoutes() {
-  // const token = Cookies.get('token')
-
-  const { isAuth } = useAuth();
-
+export function AppRoutes() {
+  const isLogin = useSelector((state) => state.auth.isLogin)
   return (
-    <Routes> 
-      <Route path="/" element={<Login/>}/>
-      <Route path="/registro" element={<Registro/>}/>
-      <Route path="*" element={<NotFound/>}/>
-      <Route element={<ProtectedRoute isAllowed={isAuth}/>}>      
-        <Route path="/main" element={<MainPiges/>}/>
-        <Route path="/main/mytracks" element={<MyTracks/>}/>
-        <Route path="/main/plailist/1" element={<PlaylistDay/>}/>      
-        <Route path="/main/plailist/2" element={<DanceHit/>}/>      
-        <Route path="/main/plailist/3" element={<IndiCharge/>}/>   
-      </Route>   
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/registration" element={<Registration />} />
+
+      <Route element={<ProtectedRoute isLogin={isLogin} />}>
+        <Route path="/" element={<Main />} />
+        <Route path="/mytracks" element={<MyTracks />} />
+        <Route path="/playlist/:id" element={<Playlist01 />} />
+      </Route>
+
+      <Route path="*" element={<NotFound />} />
     </Routes>
   )
-} 
-
-export default AppRoutes;
+}

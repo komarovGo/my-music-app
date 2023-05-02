@@ -1,67 +1,72 @@
-import { useState } from 'react';
-import { Link } from "react-router-dom"
-import { useThemeContext } from '../../context/theme'
-
-import logo from '../../img/logo.png';
-import logoBlack from '../../img/logoBlack.png';
-import BackgraundDarkSVG from '../../img/icon/BackgraundDarkSVG.svg';
-import BackgraundLightSVG from '../../img/icon/BackgraundLightSVG.svg';
-
+/* eslint-disable jsx-a11y/aria-role */
+/* eslint-disable import/no-extraneous-dependencies */
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import NavLink from './MenuNavLink'
+import logo from '../../img/logo.png'
 import * as S from './styledMenuNav'
+import { useContextTheme, themes } from '../../context/ContextTheme'
+import { SwitcherTheme } from '../../context/switcherTheme'
+import LogoBlack from '../technicalComps/logoBlack'
 
-function MenuNav (){
-    const [visible, setVisible] = useState(false);
-    const [isButtonTheme, setButtonTheme] = useState(true)
-    const {toggleTheme,theme, IsDark} = useThemeContext();
+function Nav() {
+  const theme = useContextTheme()
 
-    function toggleVisibility() {
-        setVisible(!visible);
-    }
+  const [visible, setVisible] = useState(true)
 
-    const toggleButtonTheme = () => {
-        if (!isButtonTheme) {
-            setButtonTheme(true);
-        } else {
-            setButtonTheme(false);                  
-        }
-    }
+  const toggleVisibility = () => setVisible(!visible)
 
-    return(
-    <S.MainNav style={{backgroundColor:theme.backgroundMenuNav, color:theme.color}}> 
-        <S.NavLogo>
-            <S.LogoImage src={IsDark ? logo : logoBlack} alt="logo"/> 
-        </S.NavLogo>
-        <S.NavBurge onClick={() => toggleVisibility()} role="presentation">
-            <S.BurgeLine style={{backgroundColor:theme.backgroundBurger}} />
-            <S.BurgeLine style={{backgroundColor:theme.backgroundBurger}} />
-            <S.BurgeLine style={{backgroundColor:theme.backgroundBurger}} />
-        </S.NavBurge>
-        {visible && (
-        <S.NavMenu>
-            <S.MenuList>
-                <S.MenuItem>
-                    <Link to='/main'>
-                        <S.MenuLink style={{color:theme.color}} >Главное</S.MenuLink>
-                    </Link>
-                </S.MenuItem>
-                <S.MenuItem>
-                    <Link to='/main/mytracks'>
-                        <S.MenuLink style={{color:theme.color}} >Мой плейлист</S.MenuLink>
-                    </Link>
-                </S.MenuItem>
-                <S.MenuItem>
-                    <Link to='/'>
-                    <S.MenuLink style={{color:theme.color}}  >Войти</S.MenuLink>
-                    </Link>
-                </S.MenuItem>
-                <S.MenuItem onClick={toggleTheme} >
-                     <S.backgraundColorSVG src={isButtonTheme ? BackgraundDarkSVG : BackgraundLightSVG} onClick={toggleButtonTheme}/>
-                </S.MenuItem>
-            </S.MenuList>
-        </S.NavMenu>
-        )       
-        }
-    </S.MainNav>
-    )
+  return (
+    <S.nav
+      style={{
+        backgroundColor: theme.theme.colorNav,
+        color: theme.theme.color,
+      }}
+    >
+      <Link to="/">
+        <S.logo>
+          {themes.dark === useContextTheme().theme ? (
+            <S.logoImage src={logo} alt="logo" />
+          ) : (
+            <LogoBlack style={{ width: '113.33px', height: '17px' }} />
+          )}
+        </S.logo>
+      </Link>
+      <S.burger onClick={toggleVisibility} role="presentation">
+        <S.burgerLine
+          style={{
+            backgroundColor: theme.theme.color,
+          }}
+        />
+        <S.burgerLine
+          style={{
+            backgroundColor: theme.theme.color,
+          }}
+        />
+        <S.burgerLine
+          style={{
+            backgroundColor: theme.theme.color,
+          }}
+        />
+      </S.burger>
+      <S.menu>
+        {!visible && (
+          <S.menuList>
+            <S.menuItem>
+              <NavLink address="/" text="Главное" />
+            </S.menuItem>
+            <S.menuItem>
+              <NavLink address="/mytracks" text="Мои треки" />
+            </S.menuItem>
+            <S.menuItem>
+              <NavLink address="/login" text="Войти" />
+            </S.menuItem>
+            <SwitcherTheme />
+          </S.menuList>
+        )}
+      </S.menu>
+    </S.nav>
+  )
 }
-export default MenuNav;
+
+export default Nav

@@ -1,128 +1,123 @@
-import styled from "styled-components"
+import styled, { css } from 'styled-components'
+import { HandySvg } from 'handy-svg'
+import Prev from '../../img/icon/prev.svg'
+import Play from '../../img/icon/play.svg'
+import Next from '../../img/icon/next.svg'
+import Repeat from '../../img/icon/repeat.svg'
+import Shuffle from '../../img/icon/shuffle.svg'
+import Pause from '../../img/icon/pause.svg'
 
-
-export  const BarPlayer = styled.div`
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-`
-
-export  const PlayerControls = styled.div`
-     display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    padding: 0 27px 0 31px;
-`
-
-export  const PlayerBtnPrev = styled.div`
-    margin-right: 23px;
-    
+const btn = {
+  col: css`
     padding: 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
+
+    &:active {
+      fill: #696969;
+      stroke: #ffffff;
+      cursor: pointer;
+    }
+
+    &:active svg {
+      fill: #696969;
+      stroke: #ffffff;
+      cursor: pointer;
+    }
+
+    &:hover svg {
+      fill: transparent;
+      stroke: #acacac;
+      cursor: pointer;
+    }
+  `,
+}
+
+const titleMixin = () => {
+  const styles = btn
+
+  return styles
+}
+
+export const playerControls = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding: 0 27px 0 31px;
 `
 
-export  const PlayerBtnPrevSvg = styled.img`
-    width: 15px;
-    height: 14px;
-    
+export const btnPrev = styled.div`
+  ${titleMixin}
+
+  margin-right: 23px;
+`
+export function btnPrevSvg() {
+  return <HandySvg src={Prev} width="15" height="14" />
+}
+
+export const btnPlay = styled.div`
+  ${titleMixin}
+
+  margin-right: 23px;
+`
+export function btnPlaySvg() {
+  return <HandySvg src={Play} width="22" height="20" fill="#d9d9d9" />
+}
+
+export function btnPauseSvg() {
+  return <HandySvg src={Pause} width="15" height="19" fill="#d9d9d9" />
+}
+
+export const btnNext = styled.div`
+  ${titleMixin}
+
+  margin-right: 28px;
+  fill: #a53939;
 `
 
-export  const PlayerBtnPlay = styled.div`
-    margin-right: 23px;
-    cursor: pointer;
-    padding: 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+export function btnNextSvg() {
+  return (
+    <HandySvg
+      src={Next}
+      width="15"
+      height="14"
+      fill="inherit"
+      stroke="#d9d9d9"
+    />
+  )
+}
+
+export const btnRepeat = styled.div`
+  ${titleMixin}
+
+  margin-right: 24px;
 `
 
-export  const PlayerBtnPlaySvg = styled.img`
-    width: 22px;
-    height: 20px;
-    fill: #D9D9D9;
+export function btnRepeatSvg() {
+  return (
+    <HandySvg
+      src={Repeat}
+      width="18"
+      height="12"
+      fill="transparent"
+      stroke="#696969"
+    />
+  )
+}
+
+export const btnShuffle = styled.div`
+  ${titleMixin}
+
+  display: flex;
+  align-items: center;
 `
-
-export  const PlayerBtnNext = styled.div`
-    margin-right: 28px;
-    fill: #a53939;
-
-    padding: 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-`
-
-export  const PlayerBtnNextSvg = styled.img`
-    width: 15px;
-    height: 14px;
-    fill: inherit;
-    stroke: #D9D9D9;
-`
-
-export  const PlayerBtnRepeat = styled.div`
-    margin-right: 24px;
-
-    padding: 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-`
-
-export  const PlayerBtnRepeatSvg = styled.img`
-    width: 18px;
-    height: 12px;
-    fill: transparent;
-    stroke: #696969;
-`
-
-export  const PlayerBtnShuffle = styled.div`
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-
-    padding: 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-`
-
-export  const PlayerBtnShuffletSvg = styled.img`
-    width: 15px;
-    height: 14px;
-    fill: inherit;
-    stroke: #D9D9D9;
-`
+export function btnShuffleSvg() {
+  return (
+    <HandySvg
+      src={Shuffle}
+      width="19"
+      height="12"
+      fill="transparent"
+      stroke="#696969"
+    />
+  )
+}
