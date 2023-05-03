@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
-import Nav from '../../components/MenuNav/MenuNav'
+import Nav from '../../components/menuNav/MenuNav'
 import CenterBlock from '../../components/centerBlock/CenterBlock'
 import Sidebar from '../../components/sideBar/sideBar'
 import Bar from '../../components/Bar/Bar'

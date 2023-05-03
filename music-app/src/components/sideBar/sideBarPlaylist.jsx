@@ -1,7 +1,7 @@
 import * as S from './styledSideBarPlaylist'
 import { useContextTheme, themes } from '../../context/ContextTheme'
 
-function SideBarPlaylist() {
+export default function SideBarPlaylist() {
   const theme = useContextTheme()
   return (
     <S.sidebar
@@ -21,4 +21,4 @@ function SideBarPlaylist() {
   )
 }
 
-export default SideBarPlaylist
+

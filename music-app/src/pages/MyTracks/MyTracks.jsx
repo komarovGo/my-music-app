@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
-import Nav from '../../components/MenuNav/MenuNav'
+import Nav from '../../components/menuNav/MenuNav'
 import Bar from '../../components/Bar/Bar'
 import * as S from './styledMyTracks'
 import CenterBlock from '../../components/centerBlock/CenterBlock'

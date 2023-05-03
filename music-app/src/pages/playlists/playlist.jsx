@@ -1,7 +1,7 @@
 /* eslint-disable no-template-curly-in-string */
 /* eslint-disable import/no-extraneous-dependencies */
 import { useParams } from 'react-router-dom'
-import Nav from '../../components/MenuNav/MenuNav'
+import Nav from '../../components/menuNav/MenuNav'
 import Bar from '../../components/Bar/Bar'
 import * as S from './styledPlaylist'
 import CenterBlock from '../../components/centerBlock/CenterBlock'

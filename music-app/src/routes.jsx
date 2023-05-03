@@ -6,7 +6,7 @@ import Registration from './pages/registration/registration'
 import NotFound from './pages/notFound/notFound'
 import Login from './pages/login/login'
 import Playlist01 from './pages/playlists/playlist'
-import MyTracks from './pages/myTracks/myTracks'
+import MyTracks from './pages/myTracks/MyTracks'
 import ProtectedRoute from './protected-route/ProtectedRoute'
 
 export function AppRoutes() {
