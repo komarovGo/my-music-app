@@ -1,11 +1,11 @@
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import * as S from './styledTrackTitle'
 import { useContextTheme } from '../../context/ContextTheme'
 import { getTrackId, play } from '../../store/slises/player'
 
 function TrackTitle(props) {
   const theme = useContextTheme()
-  const isPlaying = useSelector((state) => state.player.isPlaying)
+  // const isPlaying = useSelector((state) => state.player.isPlaying)
 
   const dispatch = useDispatch()
 
@@ -14,7 +14,7 @@ function TrackTitle(props) {
 
     dispatch(getTrackId(props.trackId))
 
-    dispatch(play(!isPlaying))
+    dispatch(play(true))
   }
 
   return (

@@ -15,7 +15,7 @@ function CenterBlockContent(props) {
   const playlist = props.tracks || []
 
   if (playlist.length === 0) {
-    ;({ data } = useGetAllTracksQuery(''))
+    ({ data } = useGetAllTracksQuery(''))
   } else {
     data = playlist
   }
