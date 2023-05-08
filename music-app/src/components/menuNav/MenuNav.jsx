@@ -55,7 +55,7 @@ function Nav() {
             <S.menuItem>
               <NavLink address="/" text="Главное" />
             </S.menuItem>
-            <S.menuItem>
+            <S.menuItem>  
               <NavLink address="/mytracks" text="Мои треки" />
             </S.menuItem>
             <S.menuItem>

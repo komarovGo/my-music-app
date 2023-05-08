@@ -1,5 +1,4 @@
 /* eslint-disable import/no-extraneous-dependencies */
-
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import React from 'react'
@@ -31,10 +30,10 @@ function PlaylistItem(props) {
       </SkeletonTheme>
     )
   return (
-    <S.playlistItem>
+    <S.playlistItem >
       <S.track>
         <TrackTitle trackId={props.trackId} track={props.name} />
-        <Author name={props.author} />
+        <Author  name={props.author} />
         <Album name={props.album} />
         <TrackLike trackId={props.trackId} />
         <TrackTime time={props.time} />

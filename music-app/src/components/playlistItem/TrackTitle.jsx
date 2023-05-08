@@ -29,6 +29,7 @@ function TrackTitle(props) {
       </S.titleImage>
       <S.titleText>
         <S.titleLink
+        onClick={(e) => playTrackHandler(e)}
           style={{
             color: theme.theme.color,
           }}

@@ -53,9 +53,10 @@ export function NoteSvg() {
 
 export const titleText = styled.div``
 
-export const titleLink = styled.h3`
+export const titleLink = styled.div`
   ${titleMixin}
   color: #ffffff;
+  cursor: pointer;
 `
 
 export const titleSpan = styled.span`
